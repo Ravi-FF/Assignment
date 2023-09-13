@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Gallery</title>
+    <!-- font-awesome link here  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .grid-wrapper {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-auto-rows: 150px;
+        padding: 10px;
+        width: 70%;
+        margin: 35px auto;
+        background-color: black;
+        gap: 8px;
+    }
+
+    .img-1 img {
+        object-fit: cover;
+        height: 150px;
+        width: 100%;
+    }
+
+    .column-3 {
+        grid-column: span 3;
+    }
+
+    .column-2 {
+        grid-column: span 2;
+    }
+
+    .shutter {
+        grid-column: 5;
+        grid-row: 1/5;
+    }
+
+    nav {
+        margin: 0px 10px;
+        letter-spacing: 2px;
+    }
+
+    nav,
+    ul {
+        text-transform: uppercase;
+        display: flex;
+        align-items: end;
+        gap: 20px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        color: whites;
+    }
+
+    nav ul {
+        margin: 20px 0;
+    }
+
+    nav ul li {
+        list-style: none;
+    }
+
+    .logo h1 {
+        font-size: 18px;
+        cursor: pointer;
+        margin-top: 30px;
+        color: white;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+    }
+
+    nav ul li a:hover {
+        color: orangered;
+        transition: .7s;
+    }
+
+    span i {
+        color: white;
+        margin-left: 20px;
+        font-size: 20px;
+    }
+
+    span i:hover {
+        transform: scale(1.3);
+        transition: .5s;
+        color: orangered;
+        cursor: pointer;
+    }
+
+    /* ---------media query started here----------------*/
+
+    @media screen and (max-width:992px) {
+        .grid-wrapper {
+            width: 100%;
+            grid-template-rows: auto;
+        }
+
+        .shutter {
+            grid-column: 1/6;
+            grid-row: 1;
+        }
+
+        nav,
+        ul {
+            justify-content: center;
+            flex-direction: row;
+        }
+
+        nav ul,
+        .logo h1 {
+            margin: 0;
+        }
+
+        .column-3 {
+            grid-column: span 2;
+        }
+
+        .span-1 {
+            grid-column: span 3;
+        }
+
+        .span-2 {
+            grid-column: span 2;
+        }
+
+        .span-3 {
+            grid-column: span 3;
+        }
+    }
+</style>
+
+<body>
+    <div class="grid-wrapper">
+        <div class="img-1 column-3"><img src="./images/img-1.jpg" alt="loading"></div>
+        <div class="img-1 span-1"><img src="./images/img-2.jpg" alt="loading"></div>
+        <div class="img-1"><img src="./images/img-3.jpg" alt="loading"></div>
+        <div class="img-1 column-2"><img src="./images/img-4.jpg" alt="loading"></div>
+        <div class="img-1 span-2"><img src="./images/img-5.jpg" alt="loading"></div>
+        <div class="img-1 column-2"><img src="./images/img-6.jpg" alt="loading"></div>
+        <div class="img-1 column-2"><img src="./images/img-7.jpg" alt="loading"></div>
+        <div class="img-1 "><img src="./images/img-8.jpg" alt="loading"></div>
+        <div class="img-1 column-2"><img src="./images/img-9.jpg" alt="loading"></div>
+        <div class="img-1 span-3"><img src="./images/img-10.jpg" alt="loading"></div>
+        <div class="shutter">
+            <nav>
+                <div class="logo">
+                    <h1>Shutter</h1>
+                </div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">photo</a></li>
+                    <li><a href="#">bio</a></li>
+                    <li><a href="#">blog</a></li>
+                    <li><a href="#">content</a></li>
+                </ul>
+                <div class="social-icon">
+                    <span><i class="fa-brands fa-twitter"></i></span>
+                    <span><i class="fa-brands fa-instagram"></i></span>
+                    <span><i class="fa-brands fa-facebook-f"></i></span>
+                </div>
+            </nav>
+        </div>
+    </div>
+</body>
+
+</html>
