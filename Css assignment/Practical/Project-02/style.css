@@ -72,6 +72,11 @@ nav ul li a:hover::after {
     background-color: #e74c3c;
     ;
 }
+.bars i {
+    font-size: 30px;
+    color: white;
+    display: none;
+}
 
 .active {
     color: #e74c3c;
@@ -101,7 +106,6 @@ nav ul li a:hover::after {
 }
 
 .welcome-part p {
-    width: 600px;
     margin: 20px 0;
     line-height: 30px;
     text-align: center;
@@ -219,29 +223,31 @@ nav ul li a:hover::after {
 /* first-section  */
 .row-1 {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width: 85%;
+    gap: 30px;
     position: relative;
     margin: 0 auto;
     text-align: center;
     font-family: "Open Sans";
 }
 
-.row-1 p {
+.col-1 p {
     line-height: 25px;
+    text-align: center;
     font-size: 15px;
     margin: 15px 0;
-    width: 255px;
 }
 
-.row-1 h3 {
+.col-1 h3 {
     position: relative;
     margin: 15px 0;
+    transition: 0.5s;
+    cursor: pointer;
 }
 
-.row-1 h3::after {
+.col-1 h3::after {
     content: "";
     width: 50px;
     position: absolute;
@@ -257,7 +263,11 @@ nav ul li a:hover::after {
     flex-basis: 20%;
 }
 
-.hello {
+.col-1 h3:hover {
+    color: #e74c3c;
+}
+
+.col-1-icon {
     height: 50px;
     width: 50px;
     position: relative;
@@ -267,22 +277,68 @@ nav ul li a:hover::after {
     transform: translate(-50%);
     border: 2px solid gray;
     line-height: 50px;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
-.col-1 h3 {}
+.col-1-icon:hover {
+    border: 2px solid #e74c3c;
+}
 
-@media screen and (max-width:992px) {
-    .row-1 {
-        width: 100%;
+.active-icon {
+    border: 2px solid #e74c3c;
+}
+
+.active-text {
+    color: #e74c3c;
+}
+
+@media screen and (max-width:775px) {
+    nav {
+        padding: 40px 0;
+        width: 80%;
+    }
+    .bars i{
+        display: block;
+    }
+    nav ul {
+        display: none;
     }
 
     .col-1 {
         flex-basis: 100%;
-        /* text-align: center; */
+    }
+
+    .btn-1 {
+        margin: 10px;
+    }
+
+    .welcome-part h1 {
+        font-size: 40px;
+    }
+}
+
+@media (min-width:776px) and (max-width:1200px) {
+    nav {
+        padding: 40px 0;
+        width: 80%;
+    }
+    .bars i{
+        display: block;
+    }
+    nav ul {
+        display: none;
+    }
+
+    .welcome-part h1 {
+        font-size: 50px;
+    }
+
+    .col-1 {
+        flex-basis: 40%;
     }
 
     .col-1 p {
-        /* width: 100%; */
         text-align: center;
     }
 }
