@@ -194,6 +194,7 @@ nav ul li {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     color: #35414B;
+    cursor: pointer;
 }
 
 .item-1 h5 {
@@ -238,7 +239,14 @@ nav ul li {
     margin: 50px;
     width: 300px;
     flex-basis: 25%;
+    cursor: pointer;
+    transition: 0.5s;
+    padding: 20px;
+}
 
+.second-section-item-1:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px 5px gray;
 }
 
 .second-section-item-1 h5 {
@@ -248,6 +256,10 @@ nav ul li {
 
 .second-section-item-1 p {
     line-height: 22px;
+}
+
+.hide-button {
+    display: none;
 }
 
 /* third-section */
@@ -366,7 +378,6 @@ nav ul li {
 }
 
 .two {
-    /* width: 100%; */
     flex-basis: 50%;
     text-align: center;
 }
@@ -381,6 +392,7 @@ nav ul li {
     padding-top: 70px;
     align-items: flex-start;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .footer-part ul li {
@@ -475,6 +487,10 @@ nav ul li {
         margin: 20px;
     }
 
+    .hide-button {
+        display: block;
+    }
+
     .third-section-part {
         width: 100%;
         gap: 50px;
@@ -537,11 +553,67 @@ nav ul li {
     .company img {
         padding: 20px;
     }
+}
+@media (min-width:576px) and (max-width:768px){
+    .center-nav ul {
+        display: none;
+    }
+    .top-span .btn-3{
+        margin-top: 10px;
+    }
+    .company {
+        width: 100%;
+        padding: 0;
+    }
 
+    .bars {
+        display: block;
+    }
 
+    .row-1 {
+        gap: 50px;
+    }
+
+    .third-section-part {
+        width: 100%;
+        gap: 50px;
+        justify-content: center;
+    }
+    .second-section{
+        width: 100%;
+    }
+    .second-section-item-1 {
+        flex-basis: 30%;
+        width: 100%;
+    }
+    .one {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .second-section-item-1{
+        flex-basis: 50%;
+    }
+    .one h1 {
+        font-size: 25px;
+    }
+    .two{
+        flex-basis: 100%;
+    }
+    .top-text{
+        width: 80%;
+    }
+
+    .left-part {
+        flex-basis: 70%;
+    }
+
+    .center-text-1 {
+        margin-left: 0;
+    }
 }
 
-@media (min-width:577px) and (max-width:1200px) {
+
+@media (min-width:769px) and (max-width:1200px) {
     .center-nav ul {
         display: none;
     }
@@ -559,13 +631,23 @@ nav ul li {
         gap: 50px;
         justify-content: center;
     }
-
+    .second-section{
+        width: 100%;
+    }
+    .second-section-item-1 {
+        flex-basis: 30%;
+        width: 100%;
+    }
     .one {
         flex-basis: 100%;
+        text-align: center;
     }
 
     .one h1 {
         font-size: 25px;
+    }
+    .two{
+        flex-basis: 100%;
     }
 
     .left-part {
