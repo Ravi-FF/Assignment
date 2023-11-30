@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubbling tickling</title>
+    <style>
+        *{
+            padding: 15px;
+        }
+        span{
+            display: block;
+            border: 2px solid grey;
+        }
+        ul li{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    body (great-great-grandparent)
+    <div class="great-grandparent">
+       div (great-grandparent)
+        <ul class="grand-parent">
+        ul (grandparent)
+            <li class="direct-parent">
+                li (direct-parent)
+                <span>Span</span>
+            </li>
+        </ul>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("span").click(function(){
+            event.stopPropagation()
+            $("span").parent().css("border","2px solid red");
+        })
+        $(".direct-parent").click(function(event){
+            event.stopPropagation()
+            $(".direct-parent").parent().css("border","2px solid red");
+        })
+        $(".grand-parent").click(function(event){
+            event.stopPropagation()
+            $(".grand-parent").parent().css("border","2px solid red");
+        })
+        $(".great-grandparent").click(function(event){
+            event.stopPropagation()
+            $(".great-grandparent").parent().css("border","2px solid red");
+        })
+    })
+</script>
+</html>
