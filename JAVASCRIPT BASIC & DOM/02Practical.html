@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Practical</title>
+</head>
+<style>
+    * {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        text-transform: capitalize;
+    }
+
+    h1 {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    section {
+        width: 90%;
+        background-image: linear-gradient(150deg, #ddd6f3, #faaca8);
+        margin: 10px auto;
+        border: 1px solid black;
+        box-shadow: 0 0 10px 2px gray;
+        padding: 20px;
+    }
+
+    .question {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 40px;
+        padding: 10px 0;
+    }
+
+    ul li {
+        line-height: 30px;
+    }
+
+    .Fahrenheit-box {
+        text-align: center;
+    }
+
+    .Fahrenheit-box input,
+    .Fahrenheit-box button {
+        height: 30px;
+        width: 200px;
+        padding: 0 30px;
+    }
+
+    .Fahrenheit-box button {
+        width: 150px;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+
+    /* p {
+        font-size: 18px;
+        line-height: 40px;
+    } */
+</style>
+
+<body>
+    <h1>JAVASCRIPT BASIC & DOM ASSIGNMENT</h1>
+    <main>
+        <section>
+            <p class="question">
+                que.01 Using console.log() print out the following statement: The quote 'There is no exercise better for
+                the
+                heart than reaching down and lifting people up.' by John Holmes teaches us to help one another. Using
+                console.log() print out the following quote by Mother Teresa:
+            </p>
+
+            <p class="question"> que.02. Check if typeof '10' is exactly equal to 10. If not make it exactly equal?</p>
+            <ul>
+                <li>console.log(`type of num1 is : ${typeof Number(num1)} and type of num1 is :${typeof num2}`)</li>
+            </ul>
+            <p class="question">que.03. Write a JavaScript Program to find the area of a triangle?</p>
+            <ul>
+                <li>let a = 8; <br>
+                    let b = 3;<br>
+                    let c = 9;<br>
+                    let s = (a + b + c) / 2;<br>
+                    let area = (Math.sqrt(s * (s - a) * (s - b) * (s - c))).toFixed(1);<br>
+                    console.log(`area of triangle is ${area}`);</li>
+            </ul>
+            <p class="question">
+                que.04 Write a JavaScript program to calculate days left until next Christmas?
+            </p>
+            <ul>
+                <li>let today = new Date(); <br>
+                    let Year = today.getFullYear(); <br>
+                    if (today.getMonth() == 11 && today.getDay() > 25) { <br>
+                    Year += 1;<br>
+                    } <br>
+                    let CristmasDay = new Date(Year,11,25); <br>
+                    let reminingDays = (CristmasDay.getTime()-today.getTime())/(1000*60*60*24) <br>
+                    console.log(Math.ceil(reminingDays));</li>
+            </ul>
+            <p class="question">
+                que.05 Find circumference of Rectangle formula : C = 4 * a ?
+            </p>
+            <ul>
+                <li> let circumference = (a)=>{ <br>
+                    return 4 * a; <br>
+                    } <br>
+                    a = represents the length of one side of the rectangle. <br>
+                    let sideLength = 5; <br>
+                    console.log(circumference(5));</li>
+            </ul>
+            <p class="question">
+                que.06 Convert temperature Fahrenheit to Celsius? (Conditional logic Question)
+            </p>
+            <div class="Fahrenheit-box">
+                <input type="number" placeholder="Fahrenheit Value" id="Fahrenheit">
+                <button onclick="convertCelsius()">to Convert</button>
+                <input type="number" placeholder="Celsius Value" disabled id="Celsius">
+            </div>
+            <p class="question">que.07 What is the result of the expression (5 > 3 && 2 < 4)?</p>
+                    <ul>
+                        <li>Result is : true ;</li>
+                    </ul>
+                    <p class="question">
+                        que.08 What is the result of the expression (true && 1 && "hello")?
+                    </p>
+                    <ul>
+                        <li>Result is : hello;</li>
+                    </ul>
+                    <p class="question">
+                        que.09 What is the result of the expression true && false || false && true?
+                    </p>
+                    <ul>
+                        <li>False</li>
+                    </ul>
+
+                    <p class="question">
+                        que.10 What is a Loop and Switch Case in JavaScript define that ?
+                    </p>
+                    <ul>
+                        <li>Loop: Loops are used in JavaScript to perform repeated tasks based on a condition.
+                            Conditions typically return true or false . A loop will continue running until the defined
+                            condition returns false .</li>
+                        <li>Switch case: The switch statement executes a block of code depending on different cases. The
+                            switch statement is a part of JavaScript's "Conditional" Statements, which are used to
+                            perform different actions based on different conditions. Use switch to select one of many
+                            blocks of code to be executed.</li>
+                    </ul>
+                    <p class="question">
+                        que. 11 What is the use of is Nan function?
+                    </p>
+                    <ul>
+                        <li>NaN stands for "Not a Number" and is a value in JavaScript used to represent an undefined or
+                            unrepresentable value. NaN is the result of an operation that was supposed to return a
+                            number, but couldn't because of an error or undefined/empty value.</li>
+                    </ul>
+                    <p class="question">
+                        que.12 What is the difference between && and || in JavaScript?
+                    </p>
+                    <ul>
+                        <li>|| means “or”. It evaluates to true if the expression on either side is truthy. && means
+                            “and”. It evaluates to false if the expression on either side is falsy.</li>
+                    </ul>
+                    <p class="question">que.13 Check Number Is Positive or Negative in JavaScript? </p>
+                    <ul>
+                        <li>let number = 1; <br>
+                            if (number > 0) { <br>
+                            console.log("This is a positive value") <br>
+                            } else if (number == 0) { <br>
+                            console.log("this is a zero") <br>
+                            } <br>
+                            else if (number < 0) { <br>
+                                console.log("this is a negative value") <br>
+                                }</li>
+                    </ul>
+                    <p class="question"> que.14 Find the Character Is Vowel or Not ?</p>
+                    <ul>
+                        <li>let checkVowel = (ch) => { <br>
+                            let char = ch.toLowerCase(); <br>
+                            let check = ["a", "e", "i", "o", "u"] <br>
+                            if (check.includes(char)) { <br>
+                            console.log("This is a vowel") <br>
+                            } else { <br>
+                            console.log("this is a not vowel") <br>
+                            } <br>
+                            } <br>
+                            checkVowel("E"); <br>
+                            checkVowel("d");</li>
+                    </ul>
+                    <p class="question">
+                        que.15 Write to find number is even or odd using ternary operator in JS?
+                    </p>
+                    <ul>
+                        <li>
+                            let CheckNumber =(num)=>{ <br>
+                            let oddEven = num%2==0?"this is even number":"this is a odd number" <br>
+                            console.log(oddEven) <br>
+                            } <br>
+                            CheckNumber(5); <br>
+                            CheckNumber(2);
+                        </li>
+                    </ul>
+                    <p class="question">que.16 Write find maximum number among 3 numbers using ternary operator in JS?
+                    </p>
+                    <ul>
+                        <li>let maximumCheck=()=>{ <br>
+                            let a = 10; <br>
+                            let b = 70; <br>
+                            let c = 30; <br>
+                            let check = a>b&&a>c?a:b>c?b:c; <br>
+                            return check; <br>
+                            }
+                            console.log(maximumCheck())</li>
+                    </ul>
+                    <p class="question">que.16 Write find minimum number among 3 numbers using ternary operator in JS?
+                    </p>
+                    <ul>
+                        <li>
+                            let minimumCheck = () => { <br>
+                            let a = 10; <br>
+                            let b = 0; <br>
+                            let c = 30; <br>
+                            let check = a < b && a < c ? a : b < c ? b : c; <br>
+                                return check; <br>
+                                } <br>
+                                console.log(minimumCheck()) <br>
+                        </li>
+                    </ul>
+                    <p class="question">que.17 (i) Monday to Sunday using switch case in JS? </p>
+                    <ul>
+                        <li>
+                            let date = new Date() <br>
+                            let day = date.getDay(); <br>
+                            switch (day) { <br>
+                            case day = 0: <br>
+                            console.log(`to day is Sunday`) <br>
+                            break; <br>
+                            case day = 1: <br>
+                            console.log(`to day is Monday`) <br>
+                            break; <br>
+                            case day = 2: <br>
+                            console.log(`to day is Tuesday`) <br>
+                            break; <br>
+                            case day = 3: <br>
+                            console.log(`to day is Wednesday`) <br>
+                            break; <br>
+                            case day = 4: <br>
+                            console.log(`to day is Thursday`) <br>
+                            break; <br>
+                            case day = 5: <br>
+                            console.log(`to day is Friday`) <br>
+                            break; <br>
+                            case day = 6: <br>
+                            console.log(`to day is saturday`) <br>
+                            break; <br>
+                            default: <br>
+                            console.log("invalid input") <br>
+                            break;
+                            }
+                        </li>
+                    </ul>
+                    <p class="question">
+                        que.17 (II) Vowel or Consonant using switch case in JS?
+                    </p>
+                    <ul>
+                        <li>
+                            let Character = "u"; <br>
+                            Character.toLowerCase(); <br>
+                            switch (Character) { <br>
+                            case "a": <br>
+                            console.log("this is a vowel") <br>
+                            break; <br>
+                            case "e": <br>
+                            console.log("this is a vowel") <br>
+                            break; <br>
+                            case "i": <br>
+                            console.log("this is a vowel") <br>
+                            break; <br>
+                            case "o": <br>
+                            console.log("this is a vowel") <br>
+                            break; <br>
+                            case "u": <br>
+                            console.log("this is a vowel") <br>
+                            break; <br>
+                            default: <br>
+                            console.log("this is a Consonant") <br>
+                            break;
+                            }
+                        </li>
+                    </ul>
+                    <p class="question">
+                        que.18 Write a print 972 to 897 using for loop in JS?
+                    </p>
+                    <ul>
+                        <li>for (let i = 972; i >= 897; i--) { <br>
+                            console.log(i) <br>
+                            }</li>
+                    </ul>
+                    <p class="question">
+                        que.19 Write to print factorial of given number?
+                    </p>
+                    <ul>
+                        <li>
+                            let fectorial = (num) => { <br>
+                            let count = 1; <br>
+                            if (num === 0 || num == 1) { <br>
+                            return "fectorial in not posible" <br>
+                            } else { <br>
+                            for (i = 2; i <= num; i++) { <br>
+                                count *= i; <br>
+                                } <br>
+                                return count; <br>
+                                }
+                                console.log(fectorial(0)) <br>
+                        </li>
+                    </ul>
+                    <p class="question">
+                        que.20 Write to print Fibonacci series up to given numbers?
+                    </p>
+                    <ul>
+                        <li>let series = (num) => { <br>
+                            let firstInt = 0; <br>
+                            let secondInt = 1; <br>
+                            let next = 0; <br>
+                            for (let i = 0; i < num; i++) { <br>
+                                console.log(firstInt) <br>
+                                next = firstInt + secondInt <br>
+                                firstInt = secondInt; <br>
+                                secondInt = next; <br>
+                            } <br>}
+                        series(10); <br>
+                    </li>
+                    </ul>
+        </section>
+
+    </main>
+</body>
+<script>
+    // answer number 01 
+    console.log(`${'"There is no exercise better for the heart than reaching down and lifting people up. by John Holmes teaches us to help one another."'}`);
+
+    // answer number 02
+    let num1 = "10";
+    let num2 = 10;
+    console.log(`type of num1 is : ${typeof Number(num1)} and type of num1 is :${typeof num2}`);
+
+    // answer number 03 
+    let a = 8;
+    let b = 3;
+    let c = 9;
+    let s = (a + b + c) / 2;
+    let area = (Math.sqrt(s * (s - a) * (s - b) * (s - c))).toFixed(1);
+    console.log(`area of triangle is ${area}`);
+
+    // answer number 4 
+    let today = new Date();
+    let Year = today.getFullYear();
+    if (today.getMonth() == 11 && today.getDay() > 25) {
+        Year += 1;
+    }
+    let CristmasDay = new Date(Year, 11, 25);
+    let reminingDays = (CristmasDay.getTime() - today.getTime()) / (1000 * 60 * 60 * 24)
+    console.log(Math.ceil(reminingDays));
+
+    // answer number 5 
+    let circumference = (a) => {
+        return 4 * a;
+    }
+    // a = represents the length of one side of the rectangle.
+    let sideLength = 5;
+    console.log(circumference(5));
+
+    // answer number 5
+    let convertCelsius = () => {
+        let Fahrenheit = Number(document.querySelector("#Fahrenheit").value.trim());
+        let Celsius = ((Fahrenheit - 32) * (5 / 9)).toFixed(2);
+        document.getElementById("Celsius").value = Celsius;
+    }
+    // answer number 13 
+    let number = 1;
+    if (number > 0) {
+        console.log("This is a positive value")
+    } else if (number == 0) {
+        console.log("this is a zero")
+    }
+    else if (number < 0) {
+        console.log("this is a negative value")
+    }
+
+
+    // answer number 14 
+    let checkVowel = (ch) => {
+        let char = ch.toLowerCase();
+        let check = ["a", "e", "i", "o", "u"]
+        if (check.includes(char)) {
+            console.log("This is a vowel")
+        } else {
+            console.log("this is a not vowel")
+        }
+    }
+    checkVowel("E");
+    checkVowel("d");
+
+    let CheckNumber = (num) => {
+        let oddEven = num % 2 == 0 ? "this is even number" : "this is a odd number"
+        console.log(oddEven)
+    }
+    CheckNumber(5);
+    CheckNumber(2);
+
+    // answer number 15 
+    let maximumCheck = () => {
+        let a = 10;
+        let b = 70;
+        let c = 30;
+        let check = a > b && a > c ? a : b > c ? b : c;
+        return check;
+    }
+    console.log(maximumCheck())
+
+
+    // answer number 16 
+    let minimumCheck = () => {
+        let a = 10;
+        let b = 0;
+        let c = 30;
+        let check = a < b && a < c ? a : b < c ? b : c;
+        return check;
+    }
+    console.log(minimumCheck())
+
+    // answer number 17 (i)
+    let date = new Date()
+    let day = date.getDay();
+    switch (day) {
+        case day = 0:
+            console.log(`to day is Sunday`)
+            break;
+        case day = 1:
+            console.log(`to day is Monday`)
+            break;
+        case day = 2:
+            console.log(`to day is Tuesday`)
+            break;
+        case day = 3:
+            console.log(`to day is Wednesday`)
+            break;
+        case day = 4:
+            console.log(`to day is Thursday`)
+            break;
+        case day = 5:
+            console.log(`to day is Friday`)
+            break;
+        case day = 6:
+            console.log(`to day is saturday`)
+            break;
+        default:
+            console.log("invalid input")
+            break;
+    }
+    // answer number 17 (ii)
+    let Character = "u";
+    Character.toLowerCase();
+    switch (Character) {
+        case "a":
+            console.log("this is a vowel")
+            break;
+        case "e":
+            console.log("this is a vowel")
+            break;
+        case "i":
+            console.log("this is a vowel")
+            break;
+        case "o":
+            console.log("this is a vowel")
+            break;
+        case "u":
+            console.log("this is a vowel")
+            break;
+        default:
+            console.log("this is a Consonant")
+            break;
+    };
+
+    // answer number 18 
+    for (let i = 972; i >= 897; i--) {
+        console.log(i)
+    }
+
+    // answer number 19 
+    let fectorial = (num) => {
+        let count = 1;
+        if (num === 0 || num == 1) {
+            return "fectorial in not posible"
+        } else {
+            for (i = 2; i <= num; i++) {
+                count *= i;
+            }
+            return count;
+        }
+
+    }
+    console.log(fectorial(0))
+
+    let series = (num) => {
+        let firstInt = 0;
+        let secondInt = 1;
+        let next = 0;
+        for (let i = 0; i < num; i++) {
+            console.log(firstInt)
+            next = firstInt + secondInt
+            firstInt = secondInt;
+            secondInt = next;
+        }
+    }
+    series(10);
+</script>
+
+</html>
