@@ -327,22 +327,62 @@
                                 next = firstInt + secondInt <br>
                                 firstInt = secondInt; <br>
                                 secondInt = next; <br>
-                            } <br>}
-                        series(10); <br>
-                    </li>
+                                } <br>}
+                                series(10); <br>
+                        </li>
                     </ul>
+                    <p class="question"> que.21 Write to print number in reverse order e.g.: number = 64728 ---> reverse
+                        =82746 in JS?</p>
+                    <ul>
+                        <li>let num = 5386656; <br>
+                            let revNum = Number(num.toString().split("").reverse().join("")) <br>
+                            console.log(revNum, typeof revNum);</li>
+                    </ul>
+                    <p class="question">
+                        que.22 Write a program make a summation of given number (E.g., 1523 Ans: - 11) in JS?
+                    </p>
+                    <ul>
+                        <li>
+                            let sumNumber = (num) => { <br>
+                            let sumArray = Array.from((num.toString())); <br>
+                            let counter = 0; <br>
+                            for (let i = 0; i < sumArray.length; i++) { <br>
+                                counter += Number(sumArray[i]) <br>}
+                                return counter; <br>}
+                                console.log(sumNumber(1236589));
+                        </li>
+                    </ul>
+                    <p class="question">
+                        que.23 Write a program you have to make a summation of first and last Digit. (E.g., 1234 Ans: 5)
+                        in JS?
+                    </p>
+                    <ul>
+                        <li>let lastFirstsum = (num) => { <br>
+                            let sumArray = Array.from((num.toString())); <br>
+                            let total; <br>
+                            for (let i = 0; i < sumArray.length; i++) { <br>
+                                total = Number(sumArray[0]) + Number(sumArray[sumArray.length - 1])} <br>
+                                console.log(total)} <br>
+                                lastFirstsum(1269);</li>
+                    </ul>
+                    <p class="question">
+                        que.24 Accept 3 numbers from user using while loop and check each numbers palindrome?
+                    </p>
+                    <div>
+                        <button onclick="palindromeCheck()">Click Here</button> <span id="result24"></span>
+                    </div>
         </section>
 
     </main>
 </body>
 <script>
     // answer number 01 
-    console.log(`${'"There is no exercise better for the heart than reaching down and lifting people up. by John Holmes teaches us to help one another."'}`);
+    // console.log(`${'"There is no exercise better for the heart than reaching down and lifting people up. by John Holmes teaches us to help one another."'}`);
 
     // answer number 02
     let num1 = "10";
     let num2 = 10;
-    console.log(`type of num1 is : ${typeof Number(num1)} and type of num1 is :${typeof num2}`);
+    // console.log(`type of num1 is : ${typeof Number(num1)} and type of num1 is :${typeof num2}`);
 
     // answer number 03 
     let a = 8;
@@ -350,7 +390,7 @@
     let c = 9;
     let s = (a + b + c) / 2;
     let area = (Math.sqrt(s * (s - a) * (s - b) * (s - c))).toFixed(1);
-    console.log(`area of triangle is ${area}`);
+    // console.log(`area of triangle is ${area}`);
 
     // answer number 4 
     let today = new Date();
@@ -360,7 +400,7 @@
     }
     let CristmasDay = new Date(Year, 11, 25);
     let reminingDays = (CristmasDay.getTime() - today.getTime()) / (1000 * 60 * 60 * 24)
-    console.log(Math.ceil(reminingDays));
+    // console.log(Math.ceil(reminingDays));
 
     // answer number 5 
     let circumference = (a) => {
@@ -368,7 +408,7 @@
     }
     // a = represents the length of one side of the rectangle.
     let sideLength = 5;
-    console.log(circumference(5));
+    // console.log(circumference(5));
 
     // answer number 5
     let convertCelsius = () => {
@@ -416,7 +456,7 @@
         let check = a > b && a > c ? a : b > c ? b : c;
         return check;
     }
-    console.log(maximumCheck())
+    // console.log(maximumCheck())
 
 
     // answer number 16 
@@ -427,7 +467,7 @@
         let check = a < b && a < c ? a : b < c ? b : c;
         return check;
     }
-    console.log(minimumCheck())
+    // console.log(minimumCheck())
 
     // answer number 17 (i)
     let date = new Date()
@@ -484,7 +524,7 @@
 
     // answer number 18 
     for (let i = 972; i >= 897; i--) {
-        console.log(i)
+        // console.log(i)
     }
 
     // answer number 19 
@@ -500,20 +540,82 @@
         }
 
     }
-    console.log(fectorial(0))
+    // console.log(fectorial(0))
 
+    // answer number 20 
     let series = (num) => {
         let firstInt = 0;
         let secondInt = 1;
         let next = 0;
         for (let i = 0; i < num; i++) {
-            console.log(firstInt)
+            // console.log(firstInt)
             next = firstInt + secondInt
             firstInt = secondInt;
             secondInt = next;
         }
     }
     series(10);
+
+    // answer number= 21
+
+    let num = 5386656;
+    let revNum = Number(num.toString().split("").reverse().join(""))
+    // console.log(revNum, typeof revNum);
+
+    // answer number 22 
+    let sumNumber = (num) => {
+        let sumArray = Array.from((num.toString()));
+        let counter = 0;
+        for (let i = 0; i < sumArray.length; i++) {
+            counter += Number(sumArray[i])
+        }
+        return counter;
+    }
+    // console.log(sumNumber(1236589));
+
+
+    // answer number 23 
+    let lastFirstsum = (num) => {
+        let sumArray = Array.from((num.toString()));
+        let total;
+        for (let i = 0; i < sumArray.length; i++) {
+            total = Number(sumArray[0]) + Number(sumArray[sumArray.length - 1])
+        }
+        // console.log(total)
+    }
+    lastFirstsum(1269);
+
+    // pattenrs using loops 
+    // pattern first 
+
+    // let counter1 = 0;
+    // for (let i = 1; i <= 5; i++) {
+    //     for (let x = 1; x <= i; x++) {
+    //         let x = String.fromCharCode(counter1 + 65);
+    //         document.write(x)
+    //         counter1++
+    //     }
+    //     document.write("<br>")
+    // }
+
+    let palindromeCheck = () => {
+        let userInput = prompt("Enter Palindrome Number");
+        let ans = document.getElementById("result24")
+        let i = 0;
+        let str = "";
+        while (i<userInput.length) {
+            str+=userInput[i]
+            i++;
+        }
+       let check =  str.split("").reverse().join("");
+       if (userInput==check) {
+        ans.innerText ="This is a palindrome value"
+        ans.style.color = "green"
+       } else{
+        ans.innerText ="This is a palindrome not value"
+        ans.style.color = "red"
+       }
+    }
 </script>
 
 </html>
