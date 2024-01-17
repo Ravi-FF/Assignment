@@ -371,6 +371,37 @@
                     <div>
                         <button onclick="palindromeCheck()">Click Here</button> <span id="result24"></span>
                     </div>
+                    <p class="question">
+                        que. 25 Write a JavaScript Program to display the current day and time in the following format.
+                        Sample Output: Today is Friday. Current Time is 12 PM: 12 : 22 2 ?
+                    </p>
+                    <h2 style="text-align: center; color: crimson;"></h2>
+                    </li>
+                    <p class="question">
+                        que. 26 Write a JavaScript program to get the current date?
+                    </p>
+                    <ul>
+                        <li>const date1 = new Date(); <br>
+                            const currentdate = date1.toLocaleDateString(); <br>
+                            console.log(currentdate);</li>
+                    </ul>
+                    <p class="question">
+                        que. 27 Write a JavaScript program to capitalize first letter of a string?
+                    </p>
+                    <ul>
+                        <li>let firstCaptital = () => { <br>
+                            let str = "javascript is a powerful language" <br>
+                            return str.charAt(0).toUpperCase() + str.slice(1)} <br>
+                        console.log(firstCaptital())</li>
+                    </ul>
+                    <p class="question">
+                        que.28 Write a JavaScript program to determine if a variable is array?
+                    </p>
+                    <ul>
+                        <li>let determinearr = (arr) =>{ <br>
+                            return Array.isArray(arr)?"this is a array":"This is a not array"} <br>
+                        console.log(determinearr([1,3,4]))</li>
+                    </ul>
         </section>
 
     </main>
@@ -585,37 +616,53 @@
     }
     lastFirstsum(1269);
 
-    // pattenrs using loops 
-    // pattern first 
-
-    // let counter1 = 0;
-    // for (let i = 1; i <= 5; i++) {
-    //     for (let x = 1; x <= i; x++) {
-    //         let x = String.fromCharCode(counter1 + 65);
-    //         document.write(x)
-    //         counter1++
-    //     }
-    //     document.write("<br>")
-    // }
 
     let palindromeCheck = () => {
         let userInput = prompt("Enter Palindrome Number");
         let ans = document.getElementById("result24")
         let i = 0;
         let str = "";
-        while (i<userInput.length) {
-            str+=userInput[i]
+        while (i < userInput.length) {
+            str += userInput[i]
             i++;
         }
-       let check =  str.split("").reverse().join("");
-       if (userInput==check) {
-        ans.innerText ="This is a palindrome value"
-        ans.style.color = "green"
-       } else{
-        ans.innerText ="This is a palindrome not value"
-        ans.style.color = "red"
-       }
+        let check = str.split("").reverse().join("");
+        if (userInput == check) {
+            ans.innerText = "This is a palindrome value"
+            ans.style.color = "green"
+        } else {
+            ans.innerText = "This is a palindrome not value"
+            ans.style.color = "red"
+        }
     }
+
+    // answer number 25 
+    const my_date = () => {
+        let date1 = new Date();
+        let day = date1.getDay();
+        let weekofDays = ["sunday", "monday", "tuesday", "wednesday", "thrusday", "friday", "saturday"]
+        let currentday = weekofDays[day]
+        document.querySelector("h2").innerText = `Today is ${currentday}. current Time is ${date1.toLocaleTimeString()}`;
+    }
+    setInterval(my_date, 1000);
+
+    // answer number 26
+    const date1 = new Date();
+    const currentdate = date1.toLocaleDateString();
+    // console.log(currentdate);
+
+    // answer number 27 
+    let firstCaptital = () => {
+        let str = "javascript is a powerful language"
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+    // console.log(firstCaptital())
+
+    // answer number 28 
+    let determinearr = (arr) =>{
+        return Array.isArray(arr)?"this is a array":"This is a not array"
+    }
+    // console.log(determinearr([1,3,4]))
 </script>
 
 </html>
