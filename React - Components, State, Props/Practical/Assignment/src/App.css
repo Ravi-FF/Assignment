@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.counter-wrapper {
+    height: 100vh;
+    display: flex;
+    background-color: skyblue;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter-wrapper h1 {
+    font-size: 50px;
+}
+
+.counter-wrapper h2 {
+    color: whitesmoke;
+    font-size: 35px;
+    font-family: cursive;
+}
+
+.counter-wrapper button {
+    cursor: pointer;
+    background-color: gray;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    padding: 8px 20px;
+}
+
+/* listview style  */
+.input-wrapper {
+    width: 30%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.input-wrapper input {
+    padding: 8px 10px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    outline: none;
+    width: 300px;
+}
+
+.input-wrapper button {
+    cursor: pointer;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.input-wrapper ul li {
+    border: 1px solid gray;
+    margin: 10px 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left !important;
+}
